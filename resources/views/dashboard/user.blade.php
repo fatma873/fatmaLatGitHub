@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard User</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Selamat datang, {{ auth()->user()->name }}!</h1>
+        <p>Ini adalah dashboard user.</p>
+        <form action="{{ route('logout') }}" method="POST">
+            @csrf
+            <button class="btn btn-danger">Logout</button>
+        </form>
+    </div>
+</body>
+</html>
